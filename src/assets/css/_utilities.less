@@ -1,0 +1,425 @@
+// Background Colors
+
+.bg-trans					{ background-color: transparent; }
+
+.bg-white					{ background-color: #fff; }
+
+.bg-off-white				{ background-color: @off-white; }
+
+.bg-pale-gray				{ background-color: @pale-gray; }
+
+.bg-light-blue				{ background-color: @light-blue; }
+
+.bg-cyan					{ background-color: @cyan; }
+
+.bg-dark-cyan				{ background-color: @dark-cyan; }
+
+.bg-blue					{ background-color: @blue; }
+
+.bg-med-blue				{ background-color: @med-blue; }
+
+.bg-dark-blue				{ background-color: @dark-blue; }
+
+.bg-navy					{ background-color: @navy; }
+
+.bg-light-purple			{ background-color: @light-purple; }
+
+.bg-dark-purple				{ background-color: @dark-purple; }
+
+.bg-indigo					{ background-color: @indigo; }
+
+.bg-orange					{ background-color: #d36f29; }
+
+.bg-white-trans				{ background-color: rgba(255, 255, 255, 0.85); }
+
+.bg-light-blue-trans		{ background-color: rgba(142, 214, 245, 0.85); }
+
+.bg-cyan-trans				{ background-color: rgba(0, 174, 239, 0.85); }
+
+.bg-med-blue-trans			{ background-color: rgba(38, 119, 189, 0.85); }
+
+.bg-dark-blue-trans			{ background-color: rgba(0, 92, 158, 0.85); }
+
+.bg-navy-trans				{ background-color: rgba(5, 42, 62, 0.85); }
+
+.bg-light-purple-trans 		{ background-color: rgba(141, 98, 166, 0.85); }
+
+.bg-dark-purple-trans 		{ background-color: rgba(96, 79, 161, 0.85); }
+
+.bg-indigo-trans 			{ background-color: rgba(0, 51, 77, 0.85); }
+
+.bg-orange-trans 			{ background-color: rgba(212, 112, 41, 0.85); }
+
+.bg-black-trans 			{ background-color: rgba(0, 0, 0, 0.5); }
+
+
+// On-Hover Background Colors
+
+.hover-bg-white:hover				{ background-color: #fff; 			transition: background-color 200ms linear; }
+
+.hover-bg-off-white:hover			{ background-color: @off-white; 	transition: background-color 200ms linear; }
+
+.hover-bg-pale-gray:hover			{ background-color: @pale-gray; 	transition: background-color 200ms linear; }
+
+.hover-bg-light-blue:hover			{ background-color: @light-blue; 	transition: background-color 200ms linear; }
+
+.hover-bg-cyan:hover				{ background-color: @cyan; 			transition: background-color 200ms linear; }
+
+.hover-bg-med-blue:hover			{ background-color: @med-blue; 		transition: background-color 200ms linear; }
+
+.hover-bg-dark-blue:hover			{ background-color: @dark-blue; 	transition: background-color 200ms linear; }
+
+.hover-bg-navy:hover				{ background-color: @navy; 			transition: background-color 200ms linear; }
+
+.hover-bg-light-purple:hover		{ background-color: @light-purple; 	transition: background-color 200ms linear; }
+
+.hover-bg-dark-purple:hover			{ background-color: @dark-purple; 	transition: background-color 200ms linear; }
+
+.hover-bg-indigo:hover				{ background-color: @indigo; 		transition: background-color 200ms linear; }
+
+.hover-bg-orange:hover				{ background-color: #d36f29; 		transition: background-color 200ms linear; }
+
+.hover-bg-white-trans:hover			{ background-color: rgba(255, 255, 255, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-pale-gray-trans:hover		{ background-color: rgba(227, 227, 227, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-light-gray-trans:hover	{ background-color: rgba(156, 156, 156, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-black-extra-trans:hover	{ background-color: rgba(0, 0, 0, 0.25); 		transition: background-color 200ms linear; }
+
+.hover-bg-light-blue-trans:hover	{ background-color: rgba(142, 214, 245, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-cyan-trans:hover			{ background-color: rgba(0, 174, 239, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-med-blue-trans:hover		{ background-color: rgba(38, 119, 189, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-dark-blue-trans:hover		{ background-color: rgba(0, 92, 158, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-navy-trans:hover			{ background-color: rgba(5, 42, 62, 0.85); 		transition: background-color 200ms linear; }
+
+.hover-bg-light-purple-trans:hover 	{ background-color: rgba(141, 98, 166, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-dark-purple-trans:hover 	{ background-color: rgba(96, 79, 161, 0.85); 	transition: background-color 200ms linear; }
+
+.hover-bg-indigo-trans:hover 		{ background-color: rgba(0, 51, 77, 0.85); 		transition: background-color 200ms linear; }
+
+.hover-bg-orange-trans:hover 		{ background-color: rgba(212, 112, 41, 0.85); 	transition: background-color 200ms linear; }
+
+
+// Overlay Colors
+
+.overlay:after { 
+	content: "";
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+    top: 0;
+    left: 0;
+	z-index: 4;
+	-webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 200ms linear;
+}
+
+.overlay-white:after				{ background-color: #fff; }
+
+.overlay-light-blue:after			{ background-color: @light-blue; }
+
+.overlay-cyan:after					{ background-color: @cyan; }
+
+.overlay-med-blue:after				{ background-color: @med-blue; }
+
+.overlay-dark-blue:after			{ background-color: @dark-blue; }
+
+.overlay-light-purple:after			{ background-color: @light-purple; }
+
+.overlay-dark-purple:after			{ background-color: @dark-purple; }
+
+.overlay-indigo:after				{ background-color: @indigo; }
+
+.overlay-light-purple-trans:after 	{ background-color: rgba(141, 98, 166, 0.85); }
+
+.overlay-dark-purple-trans:after 	{ background-color: rgba(78, 50, 121, 0.85); }
+
+.overlay-orange-trans:after 		{ background-color: rgba(212, 112, 41, 0.85); }
+
+.overlay-indigo-trans:after 		{ background-color: rgba(0, 51, 77, 0.85); }
+
+.overlay-cyan-trans:after			{ background-color: rgba(0, 176, 240, 0.85); }
+
+.overlay-med-blue-trans:after		{ background-color: rgba(0, 108, 191, 0.85); }
+
+.overlay-navy-trans:after			{ background-color: rgba(5, 42, 62, 0.85); }
+
+.overlay.playing:after { 
+	background-color: rgba(0, 0, 0, 0);
+}
+
+// Layout Styles
+
+
+.container {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0;
+	width: 1161px;
+}
+
+@media (max-width: 1200px) {
+	.container {
+		width: 953px;
+	}
+}
+
+@media (max-width: 992px) {
+	.container {
+		width: 729px;
+	}
+}
+
+@media (max-width: 767px) {
+	.container {
+		width: auto;
+	}
+}
+
+.col-two-thirds {
+	width: 66.66%;
+}
+
+.col-half {
+	width: 50%;
+}
+
+.col-third {
+	width: 33.33%;
+}
+
+.col-quarter {
+	width: 25%;
+}
+
+.col-fifth {
+	width: 20%;
+}
+
+.full-height {
+	height: 100% !important;
+}
+
+.one-quarter-height {
+	height: 25% !important;
+}
+
+.one-third-height {
+	height: 34% !important;
+}
+
+.half-height {
+	height: 50% !important;
+}
+
+.two-thirds-height {
+	height: 66% !important;
+}
+
+.three-quarter-height {
+	height: 75% !important;
+}
+
+.full-width {
+	width: 100% !important;
+}
+
+.half-width {
+	width: 50% !important;
+}
+
+.float-left {
+	display: block;
+	float: left;
+}
+
+.float-right {
+	display: block;
+	float: right;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.pos-rel {
+	position: relative;
+}
+
+.pos-abs {
+	position: absolute;
+}
+
+.pos-fix {
+	position: fixed;
+}
+
+.disp-block {
+	display: block;
+}
+
+.disp-inline-block {
+	display: inline-block;
+}
+
+.disp-table {
+	display: table;
+	height: 100%;
+	width: 100%;
+	table-layout: fixed;
+}
+
+.disp-table-row {
+	display: table-row;
+}
+
+.disp-table-cell {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-top {
+	vertical-align: top;
+}
+
+.text-middle {
+	vertical-align: middle;
+}
+
+.text-bottom {
+	vertical-align: bottom;
+}
+
+@media (min-width: 1201px) {
+	.xl-hide {
+		display: none !important;
+	}
+}
+
+@media (max-width: 1200px) {
+	.xl-only {
+		display: none !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.mobile-only {
+		display: none !important;
+	}
+}
+
+@media (max-width: 767px) {
+	.desktop-only {
+		display: none !important;
+	}
+}
+
+.header-bumper {
+	// Account for header for vertical centering
+	padding-top: 132px;
+}
+
+@media (max-width: 1440px) {
+	.header-bumper {
+		padding-top: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.header-bumper {
+		padding-top: 70px;
+	}
+}
+
+.arrow-bumper {
+	// Account for next-page scroll arrow for vertical centering
+	padding-bottom: 70px;
+}
+
+@media (max-width: 767px) {
+	.arrow-bumper {
+		padding-bottom: 0;
+	}
+}
+
+.services-nav-bumper {
+	// Account for services navbar for vertical centering
+	padding-bottom: 132px;
+}
+
+@media (max-width: 1200px) {
+	.services-nav-bumper {
+		padding-bottom: 100px;
+	}
+}
+
+@media (max-width: 767px) {
+	.services-nav-bumper {
+		padding-bottom: 70px;
+	}
+}
+
+.footer-bumper {
+	// Account for footer for vertical centering
+	padding-bottom: 175px;
+}
+
+@media (max-width: 1524px) {
+	.footer-bumper {
+		padding-bottom: 147px;
+	}
+}
+
+@media (max-width: 959px) {
+	.footer-bumper {
+		padding-bottom: 122px;
+	}
+}
+
+@media (max-width: 767px) {
+	.footer-bumper {
+		padding-bottom: 88px;
+	}
+}

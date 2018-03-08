@@ -1,0 +1,80 @@
+// Hover Overlay
+
+.hover-child {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -99;
+	opacity: 0;
+	display: block;
+	transition: opacity 0.5s;
+}
+
+.hover-parent:hover .hover-child,
+.hover-child.hover {
+	z-index: 99;
+	opacity: 1;
+}
+
+// Ken Burns
+
+.bg-img.ken-burns:hover > img { 
+	animation: zoom 25s linear infinite alternate;
+	-ms-animation: zoom 25s linear infinite alternate;
+	-webkit-animation: zoom 25s linear infinite alternate;
+	-moz-animation: zoom 25s linear infinite alternate;
+}
+
+@-webkit-keyframes zoom {
+  from {
+  	transform: scale(1.0) translateX(-50%) translateY(-50%) translateZ(0);
+    -ms-transform: scale(1.0) translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-transform: scale(1.0) translateX(-50%) translateY(-50%) translateZ(0);
+    -moz-transform: scale(1.0) translateX(-50%) translateY(-50%) translateZ(0);
+  }
+  to {
+  	transform: scale(1.25) translateX(-40%) translateY(-40%) translateZ(0);
+    -ms-transform: scale(1.25) translateX(-40%) translateY(-40%) translateZ(0);
+    -webkit-transform: scale(1.25) translateX(-40%) translateY(-40%) translateZ(0);
+    -moz-transform: scale(1.25) translateX(-40%) translateY(-40%) translateZ(0);
+  }
+}
+
+// Horizontal Slide-In
+
+.active-slide-right .hover-child {
+	left: -100%;
+	opacity: 1;
+	transition: left 0.7s;
+}
+
+.active-slide-left .hover-child {
+	left: 100%;
+	opacity: 1;
+	transition: left 0.7s;
+}
+
+.active-slide-right .slide-right {
+	left: 0;
+}
+
+.active-slide-right .slide-left {
+	left: -100%;
+}
+
+.active-slide-left .slide-right {
+	left: 100%;
+}
+
+.active-slide-left .slide-left {
+	left: 0;
+}
+
+@media screen and (max-width: 767px) {
+	.hover-child {
+		z-index: 99;
+		opacity: 1;
+	}
+}

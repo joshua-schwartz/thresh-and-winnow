@@ -1,0 +1,89 @@
+// Background Image
+
+.bg-img,
+.fg-img {
+	position: relative;	
+	height: 100%;
+	overflow: hidden;
+}
+
+.bg-img > img,
+.fg-img > img { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    -ms-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -moz-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.bg-img > img { 
+    z-index: -1;
+}
+
+.fg-img > img { 
+    z-index: 1;
+}
+
+.bg-img.img-left > img,
+.fg-img.img-left > img {
+    left: 0;
+    min-width: auto;
+    -ms-transform: translateX(0) translateY(-50%) translateZ(0);
+    -moz-transform: translateX(0) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+    transform: translateX(0) translateY(-50%) translateZ(0);
+}
+
+.bg-img.img-right > img,
+.fg-img.img-right > img {
+    right: 0;
+    left: auto;
+    min-width: auto;
+    -ms-transform: translateX(0) translateY(-50%) translateZ(0);
+    -moz-transform: translateX(0) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(0) translateY(-50%) translateZ(0);
+    transform: translateX(0) translateY(-50%) translateZ(0);
+}
+
+.half-height .bg-img {
+	top: 1px;
+}
+
+.half-height .bg-img > img {
+	z-index: 1;
+}
+
+.half-height .bg-img .bg-img-overlay {
+	z-index: 2;
+	position: relative;
+	-webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+.half-height .bg-img .bg-img-overlay .overlay-content {
+	z-index: 3;
+	position: absolute;
+	width: 100%;
+	top: 50%;
+    left: 50%;
+    -ms-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -moz-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+@media (max-width: 767px) {
+	.bg-img > img.team-pic,
+	.fg-img > img.team-pic { 
+		height: 100%; 
+		min-width: auto;
+	}
+}

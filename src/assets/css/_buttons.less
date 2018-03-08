@@ -1,0 +1,204 @@
+.button,
+button {
+	position: relative;
+	width: 325px;
+	height: 70px;
+	border: 3px solid #fff;
+	color: #fff;
+	line-height: 64px;
+	background: transparent;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	font-size: 16px;
+	letter-spacing: 1px;
+	transition: all 100ms;
+	overflow: hidden;
+	-webkit-transition: border-color 0.4s;
+	transition: border-color 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button::after,
+.button > span,
+button::after,
+button > span {
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.button::after,
+button::after {
+	content: attr(data-text);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	color: inherit;
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+
+.button > span,
+button > span {
+	display: block;
+}
+
+.button:hover,
+button:hover {
+	color: inherit;
+	border-color: inherit;
+}
+
+.button:hover::after,
+button:hover::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.button:hover > span,
+button:hover > span {
+	opacity: 0;
+	-webkit-transform: translate3d(0, -25%, 0);
+	transform: translate3d(0, -25%, 0);
+}
+
+// Alt Btn
+
+.btn-alt {
+	border-color: @medium-gray;
+	color: @medium-gray;
+}
+
+.btn-alt:hover {
+	border-color: @cyan;
+	color: @cyan;
+}
+
+.button.btn-alt::after,
+button.btn-alt::after {
+	color: @cyan;
+}
+
+// Submit Btn
+
+.btn-submit {
+	border-color: @medium-gray;
+	color: @medium-gray;
+}
+
+.btn-submit:hover {
+	background: @cyan;
+	color: #fff;
+	border-color: @cyan;
+}
+
+.button.btn-submit::after,
+button.btn-submit::after {
+	color: #fff;
+}
+
+.btn-submit .ripple-obj {
+	height: 100%;
+	pointer-events: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	fill: @dark-cyan;
+}
+
+.ripple-obj use {
+	opacity: 0;
+}
+
+// Submit Btn - Disabled
+
+.btn-submit[disabled] {
+	border-color: @pale-gray;
+	color: @pale-gray;
+	cursor: default;
+}
+
+.btn-submit[disabled]:hover {
+	background: transparent;
+	color: @pale-gray;
+	border-color: @pale-gray;
+}
+
+.btn-submit[disabled]:hover > span {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.btn-submit[disabled]::after {
+	opacity: 0;
+	-webkit-transform: translate3d(0, 25%, 0);
+	transform: translate3d(0, 25%, 0);
+}
+
+/*
+.btn-submit[disabled] .ripple-obj {
+	display: none;
+}
+*/
+
+// Round Btn
+
+.btn-rnd {
+	border-radius: 40px;
+}
+
+@media screen and (max-width: 1200px) {
+	button, 
+	.button { 
+		width: 275px;
+		height: 60px;
+		line-height: 54px;
+		font-size: 14px; 
+	}
+	
+	.btn-rnd {
+		border-radius: 30px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+	button, 
+	.button { 
+		width: 225px;
+		height: 50px;
+		border-width: 2px;
+		line-height: 46px;
+		font-size: 12px; 
+	}
+	
+	.btn-rnd {
+		border-radius: 25px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	button, 
+	.button { 
+		width: 185px;
+		height: 40px;
+		line-height: 36px;
+		font-size: 12px; 
+	}
+	
+	.btn-rnd {
+		border-radius: 20px;
+	}
+}
