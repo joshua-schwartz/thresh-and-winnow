@@ -3,8 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: {
-    app: './src/assets/js/index.js'
+    home: './src/index.js',
+    blog: '',
+    
   },
   resolve: {
     extensions: [ '.js' ]
@@ -58,6 +61,12 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.(html)$/,
+        use: {
+          loader: 'html-loader'
+        }
       }
     ]
   }
