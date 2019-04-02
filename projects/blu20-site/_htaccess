@@ -1,0 +1,69 @@
+# 1 DAY
+<FilesMatch "\.(jpg|jpeg|png|gif|svg|pdf|mp4|txt|xml|js|css|woff)$">
+Header set Cache-Control "max-age=604800, public"
+</FilesMatch>
+
+# NEVER CACHE
+<FilesMatch "\.(html|php)$">
+Header set Cache-Control "max-age=0, private, no-store, no-cache, must-revalidate"
+</FilesMatch>
+
+# compress text, html, javascript, css, xml:
+AddType image/svg+xml .svg
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE image/svg+xml
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Removes index.php from ExpressionEngine URLs
+    RewriteCond %{THE_REQUEST} ^GET.*index\.php [NC]
+    RewriteCond %{REQUEST_URI} !/system/.* [NC]
+    RewriteRule (.*?)index\.php/*(.*) /$1$2 [R=301,NE,L]
+
+    # Directs all EE web requests through the site index file
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.php/$1 [L]
+</IfModule>
+
+Redirect 301 http://www.blu20.com/index.html http://www.blu20.com/
+Redirect 301 http://blu20.com/ http://www.blu20.com/
+Redirect 301 http://blu20.com/index.html http://www.blu20.com/
+
+Redirect 301 /work /case-studies/index.html
+Redirect 301 /work/work-specific/17 /case-studies/axios.html
+Redirect 301 /work/work-specific/32 /case-studies/fab-rehab.html
+Redirect 301 /work/work-specific/35 /case-studies/strauss.html
+Redirect 301 /case-studies/venado.html /index.html
+Redirect 301 /about/our-crew.html /about/index.html
+
+Redirect 301 /blog/blog-details/why-brick-and-mortar-is-the-next-great-data-reservoir /blog/why-brick-and-mortar-is-the-next-great-data-reservoir.html
+Redirect 301 /blog/blog-details/does-your-business-have-social-skills-part-2 /blog/does-your-business-have-social-skills-part-2.html
+Redirect 301 /blog/blog-details/weathering-digital-disruption /blog/weathering-digital-disruption.html
+Redirect 301 /blog/blog-details/data-marketing-by-the-numbers /blog/data-marketing-by-the-numbers.html
+Redirect 301 /blog/blog-details/44-facts-defining-the-future-of-customer-engagement /blog/44-facts-defining-the-future-of-customer-engagement.html
+Redirect 301 /blog/blog-details/who-whale-when-where-why /blog/who-whale-when-where-why.html
+Redirect 301 /blog/blog-details/does-your-business-have-social-skills /blog/does-your-business-have-social-skills.html
+Redirect 301 /blog/blog-details/what-the-fish-is-data-driven-marketing /blog/what-the-fish-is-data-driven-marketing.html
+Redirect 301 /blog/blog-details/let-the-data-preach /blog/let-the-data-preach.html
+Redirect 301 /blog/blog-details/engage-customers-like-a-boss /blog/engage-customers-like-a-boss.html
+
+Redirect 301 /news/news-details /blog
+Redirect 301 /news/news-details/63 /blog/we-won-a-telly.html
+
+Redirect 301 /showme/index.html /index.html
+Redirect 301 /RES16.html /res16.html
+Redirect 301 /RES16 /res16.html
+Redirect 301 /res16 /res16.html
