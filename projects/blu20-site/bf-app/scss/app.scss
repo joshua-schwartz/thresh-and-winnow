@@ -1,0 +1,118 @@
+@import "settings";
+//@import "foundation";
+
+// Or selectively include components
+ @import
+//   "foundation/components/accordion",
+//   "foundation/components/alert-boxes",
+   "foundation/components/block-grid",
+//   "foundation/components/breadcrumbs",
+//   "foundation/components/button-groups",
+//   "foundation/components/buttons",
+   "foundation/components/clearing",
+//   "foundation/components/dropdown",
+//   "foundation/components/dropdown-buttons",
+//   "foundation/components/flex-video",
+//   "foundation/components/forms",
+   "foundation/components/grid",
+//   "foundation/components/inline-lists",
+//   "foundation/components/joyride",
+//   "foundation/components/keystrokes",
+//   "foundation/components/labels",
+//   "foundation/components/magellan",
+//   "foundation/components/orbit",
+//   "foundation/components/pagination",
+//   "foundation/components/panels",
+//   "foundation/components/pricing-tables",
+//   "foundation/components/progress-bars",
+//   "foundation/components/reveal",
+//   "foundation/components/side-nav",
+//   "foundation/components/split-buttons",
+//   "foundation/components/sub-nav",
+//   "foundation/components/switch",
+   "foundation/components/tables",
+//   "foundation/components/tabs",
+//   "foundation/components/thumbs",
+//   "foundation/components/tooltips",
+   "foundation/components/top-bar",
+   "foundation/components/type";
+//   "foundation/components/offcanvas",
+//   "foundation/components/visibility";
+
+body, body *:not(p) { color: #ffffff; }
+
+p { color: #222222; }
+
+.row { max-width: 100%; }
+
+hr { margin: 0 auto; width: 80%; }
+
+.block { display: block !important; }
+.inline-block { display: inline-block !important; }
+.table { display: table !important; }
+.table-cell { display: table-cell !important; }
+.vert-align-mid { vertical-align: middle !important; }
+
+.small-hide { display: none; }
+
+// Background colors
+.bg-blue-royal { background-color: #0F6CB5; }
+.bg-white { background-color: #FFFFFF; }
+.bg-white-transparent { background-color: rgba(255,255,255, 0.3); }
+.bg-blue-graphic { background: url(../images/bg-blue-graphic.svg) center center no-repeat; background-size: cover; background-attachment: fixed; }
+.bg-orange { background-color: #FF8A00; }
+.bg-orange-dark { background-color: #D37107; }
+.bg-grey-light { background-color: #CCCCCC; }
+.bg-grey-mid { background-color: #BCBCBC; }
+.bg-grey-dark { background-color: #666666; }
+.bg-grey-graphic { background: url(../images/bg-grey-graphic.svg) center center no-repeat; background-size: cover; background-attachment: fixed; }
+
+// Heights and Widths
+.small-height-3vh { height: 3vmax; }
+.small-height-4vh { height: 4vmax; }
+.small-height-5vh { height: 5vmax; }
+.small-height-7vh { height: 7vmax; }
+.small-height-10vh { height: 10vmax; }
+.small-height-11vh { height: 11vmax; }
+.small-height-12vh { height: 12vmax; }
+.small-height-13vh { height: 13vmax; }
+.small-height-15vh { height: 15vmax; }
+.small-height-16vh { height: 16vmax; }
+.small-height-17vh { height: 17vmax; }
+.small-height-25vh { height: 25vmax; }
+.small-height-80vh { height: 80vmax; }
+
+.small-width-3vw { width: 3vmin; }
+.small-width-4vw { width: 4vmin; }
+.small-width-8vw { width: 8vmin; }
+.small-width-12vw { width: 12vmin; }
+
+.full-width { width: 100%; }
+
+// Font Sizes
+.small-font-size-1 { font-size: 1.75vmax; }
+.small-font-size-2 { font-size: 2.15vmax; }
+.small-font-size-3 { font-size: 3vmax; }
+
+@media only screen and (min-width:40.063em) {
+	.medium-height-3vh { height: 3vmax; }
+	.medium-height-4vh { height: 4vmax; }
+	.medium-height-6vh { height: 6vmax; }
+	.medium-height-7vh { height: 7vmax; }
+	.medium-height-11vh { height: 11vmax; }
+	.medium-height-12vh { height: 12vmax; }
+	.medium-height-13vh { height: 13vmax; }
+	.medium-height-16vh { height: 16vmax; }
+	.medium-height-20vh { height: 20vmax; }
+	.medium-height-23vh { height: 23vmax; }
+	.medium-height-86vh { height: 86vmax; }
+	
+	.medium-width-2vw { width: 2vmin; }
+	
+	.medium-font-size-1 { font-size: 1.3vmax; }
+	.medium-font-size-2 { font-size: 1.55vmax; }
+	.medium-font-size-3 { font-size: 1.65vmax; }
+	.medium-font-size-4 { font-size: 2vmax; }
+	.medium-font-size-5 { font-size: 2.6vmax; }
+	.medium-hide { display: none; }
+}

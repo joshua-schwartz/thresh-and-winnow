@@ -1,0 +1,1 @@
+$(window).load(function(){$(".waves").animate({top:"-60%"},2500)});
